@@ -1,24 +1,20 @@
-# README
+# Wheel March
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Developer Week 2017 Submission
 
-Things you may want to cover:
+### Contributors
 
-* Ruby version
+Derrick
+@whyderrick
 
-* System dependencies
+Hunter
+@bootcoder
 
-* Configuration
+Jadzia
+@jadziahax
 
-* Database creation
+Kathy
+@katherinebui
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Maxwell
+@pongo-pygmaeus

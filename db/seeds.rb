@@ -1,7 +1,70 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Ride.destroy_all
+DriverDetail.destroy_all
+Invitation.destroy_all
+
+# Gen a few Users
+# Gen a few rides
+# Some users as drivers, some as passengers
+
+
+u1 = User.create(
+                username: 'tom',
+                first_name: 'tom',
+                last_name: 'tomtom',
+                email: 'tom@tom.com',
+                phone: '(415) 555-5555',
+                zip: '94127'
+                )
+
+u2 = User.create(
+                username: 'tim',
+                first_name: 'tim',
+                last_name: 'timtim',
+                email: 'tim@tim.com',
+                phone: '(415) 555-5550',
+                zip: '94107'
+                )
+
+u3 = User.create(
+                username: 'tina',
+                first_name: 'tina',
+                last_name: 'tinatina',
+                email: 'tina@tina.com',
+                phone: '(415) 555-5551',
+                zip: '94107'
+                )
+
+u4 = User.create(
+                username: 'trina',
+                first_name: 'trina',
+                last_name: 'trinatrina',
+                email: 'trina@trina.com',
+                phone: '(415) 555-5551',
+                zip: '94107'
+                )
+
+
+d1 = DriverDetail.create(
+                        make: 'Tesla',
+                        model: 'Model S',
+                        tag: 'ZeroCool',
+                        driver: u1
+                        )
+
+r1 = Ride.create(
+                driver: u1,
+                max_seats: 2,
+                max_range: 3,
+                start_time: DateTime.now + 1
+                )
+
+i1 = Invitation.create(
+                    driver: u1,
+                    new_driver: u4,
+                    status: 'invited',
+                    code: 'AAA1'
+                    )
+
+u2.rides << r1
+u3.rides << r1

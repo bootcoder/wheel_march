@@ -2,7 +2,7 @@
 
 ### Developer Week 2017 Submission
 
-App establishing ridesharing to assist in transporting individuals to protests as needed.
+App establishing ridesharing to assist in transporting individuals to protests as needed. Initial app will be built as a Fullstack Rails suite.
 
 ### Contributors
 

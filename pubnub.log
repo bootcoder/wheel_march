@@ -1,2 +1,3 @@
 # Logfile created on 2017-02-11 15:56:22 -0800 by logger.rb/56815
 D, [2017-02-11T15:56:22.745678 #30192] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.17
+E, [2017-02-11T18:15:55.626076 #30192] ERROR -- : Couldn't cleanly terminate all actors in 10 seconds!

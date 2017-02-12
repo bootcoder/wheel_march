@@ -2,6 +2,7 @@ User.destroy_all
 Ride.destroy_all
 DriverDetail.destroy_all
 Invitation.destroy_all
+PassengerRide.destroy_all
 
 u1 = User.create(
                 username: 'tom',
@@ -62,6 +63,13 @@ r1 = Ride.create(
                 start_time: DateTime.now + 1
                 )
 
+r2 = Ride.create(
+                driver: u2,
+                max_seats: 6,
+                max_range: 3,
+                start_time: DateTime.now + 2
+                )
+
 i1 = Invitation.create(
                     driver: u1,
                     new_driver: u4,
@@ -71,3 +79,4 @@ i1 = Invitation.create(
 
 u2.rides << r1
 u3.rides << r1
+u1.rides << r2

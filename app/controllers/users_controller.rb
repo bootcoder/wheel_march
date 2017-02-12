@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if user_params[:password] == user_params[:password_confirmation]
         if @user.save
+          session[:id] = @user.id
           format.html { redirect_to @user, notice: 'User successfully created.' }
           format.json { render json: @user }
         else

@@ -3,18 +3,15 @@ Ride.destroy_all
 DriverDetail.destroy_all
 Invitation.destroy_all
 
-# Gen a few Users
-# Gen a few rides
-# Some users as drivers, some as passengers
-
-
 u1 = User.create(
                 username: 'tom',
                 first_name: 'tom',
                 last_name: 'tomtom',
                 email: 'tom@tom.com',
                 phone: '(415) 555-5555',
-                zip: '94127'
+                zip: '94127',
+                password: 'tomtom',
+                password_confirmation: 'tomtom'
                 )
 
 u2 = User.create(
@@ -23,7 +20,9 @@ u2 = User.create(
                 last_name: 'timtim',
                 email: 'tim@tim.com',
                 phone: '(415) 555-5550',
-                zip: '94107'
+                zip: '94107',
+                password: 'tomtom',
+                password_confirmation: 'tomtom'
                 )
 
 u3 = User.create(
@@ -32,7 +31,9 @@ u3 = User.create(
                 last_name: 'tinatina',
                 email: 'tina@tina.com',
                 phone: '(415) 555-5551',
-                zip: '94107'
+                zip: '94107',
+                password: 'tomtom',
+                password_confirmation: 'tomtom'
                 )
 
 u4 = User.create(
@@ -41,7 +42,9 @@ u4 = User.create(
                 last_name: 'trinatrina',
                 email: 'trina@trina.com',
                 phone: '(415) 555-5551',
-                zip: '94107'
+                zip: '94107',
+                password: 'tomtom',
+                password_confirmation: 'tomtom'
                 )
 
 

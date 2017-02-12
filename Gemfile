@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
@@ -17,6 +16,7 @@ gem 'dotenv-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'faker'
+gem 'pubnub', '~> 4.0.15'
 
 group :development, :test do
   gem 'byebug', platform: :mri

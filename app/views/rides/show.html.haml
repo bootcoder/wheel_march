@@ -1,3 +1,13 @@
 %h1 Your Ride
 
-= @ride.end_point
+
+= "Driver: #{@ride.driver.first_name}"
+%br
+= "Destination: #{@ride.end_point}"
+%br
+= "Seats avaialable: #{@ride.passengers.count}/#{@ride.max_seats}"
+%br
+= link_to(@ride, {}, {method: :put})
+%br
+- if flash[:alert]
+  = flash[:alert]

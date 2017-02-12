@@ -1,4 +1,8 @@
 %h1 Users Index
 
-- @users.each do |user|
-  = user.username
+%ul
+  - @users.each do |user|
+    %li
+      = user.username
+
+= link_to 'Register', new_user_path

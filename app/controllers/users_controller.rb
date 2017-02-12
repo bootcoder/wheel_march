@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @users }
+    end
   end
 
   def new

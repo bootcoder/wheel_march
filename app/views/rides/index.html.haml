@@ -1,5 +1,6 @@
 %h1 Rides index
 
-- @rides.each do |item|
-  %p
-    = "Ride id: #{item.id}. Driver? #{item.driver.username}"
+%ul
+  - @rides.each do |item|
+    %li
+      = "Ride id: #{item.id}. Driver? #{item.driver.username}"

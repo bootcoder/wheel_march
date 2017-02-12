@@ -1,0 +1,22 @@
+%h1 Start a Ride
+
+= form_for @ride do |f|
+  %fieldset
+    = f.label :max_seats, "How many passengers can you take?"
+    = f.number_field :max_seats
+  %fieldset
+    = f.label :max_range, "How many miles of a detour are you willing to make?"
+    = f.number_field :max_range
+  %fieldset
+    = f.label :start_point, "Where are you leaving from?"
+    = f.text_field :start_point
+  %fieldset
+    = f.label :end_point, "Where are you going?"
+    = f.text_field :end_point
+  %fieldset
+    = f.label :start_time, "When are you leaving"
+    = f.datetime_local_field :start_time
+  = f.hidden_field :driver_id, value: 1
+  = f.submit
+  -# needs to be update to current_user.id once
+  -# we've implemented user sessions.

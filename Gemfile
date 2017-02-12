@@ -20,6 +20,7 @@ gem 'faker'
 gem 'haml-rails'
 gem 'bcrypt'
 
+
 # ENV specific gems
 group :development, :test do
   gem 'byebug', platform: :mri

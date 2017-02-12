@@ -1,0 +1,17 @@
+%h1 New DriverDetail
+
+= form_for [@user, @driver_detail] do |f|
+  -# 1 is standing in for current user to be implemented w/ sessions
+  %fieldset
+    = f.label :make, "What is the make of your car?"
+    = f.text_field :make
+  %fieldset
+    = f.label :model, "What is the model of your car?"
+    = f.text_field :model
+  %fieldset
+    = f.label :tag, "What is your license plate number?"
+    = f.text_field :tag
+  = f.hidden_field :driver_id, value: 1
+  -# needs to be updated to current_user.id once
+  -# we've implemented user sessions.
+  = f.submit

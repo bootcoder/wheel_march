@@ -1,0 +1,6 @@
+%h1 DriverDetails index
+
+%ul
+  - @driver_details.each do |driver_detail|
+    %li
+      = "Make: #{driver_detail.id} Model: #{driver_detail.model} Tag: #{driver_detail.tag}"

@@ -1,6 +1,7 @@
 class PassengerRidesController < ApplicationController
 
   def subscribe
+
   end
 
   def publish

@@ -1,0 +1,12 @@
+.nav
+  - if current_user
+    .nav-text
+      Logged in as:
+      = current_user.username
+    .nav-button
+      = form_tag session_path, method: :delete do
+        = submit_tag 'Logout'
+  - else
+    = render 'sessions/form'
+
+%hr

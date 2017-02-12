@@ -1,0 +1,10 @@
+= form_tag session_path do
+  .form-input
+    = label_tag :email
+    = text_field_tag 'session[email]'
+  .form-input
+    = label_tag :password
+    = password_field_tag 'session[password]'
+  .form-button
+    = submit_tag 'Signin'
+

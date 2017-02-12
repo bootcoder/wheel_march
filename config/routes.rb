@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   resources :rides
   resources :invitations
+
+  resource :session, :only => [:new, :create, :destroy]
+
 end

@@ -1,11 +1,3 @@
 %h1 Users NEW
 
 = render 'form', user: @user
-
-- if current_user
-  %h1
-    CURRENT USER:
-    = current_user.username
-- else
-  %h2
-    No current user

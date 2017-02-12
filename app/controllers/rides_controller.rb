@@ -1,4 +1,6 @@
 class RidesController < ApplicationController
+  before_action :set_ride, only: [:show, :edit, :update, :destroy]
+
   def index
     @rides = Ride.all
     respond_to do |format|
@@ -12,8 +14,6 @@ class RidesController < ApplicationController
   end
 
   def create
-    @ride = Ride.new(ride_params)
-
     if @ride.save
       respond_to do |format|
         format.html { redirect_to ride_path(@ride) }
@@ -29,7 +29,6 @@ class RidesController < ApplicationController
   end
 
   def show
-    @ride = Ride.find(params[:id])
     respond_to do |format|
       format.html
       format.json { render json: @ride }
@@ -46,6 +45,10 @@ class RidesController < ApplicationController
   end
 
   private
+    def set_user
+      @ride = Ride.find(params[:id])
+    end
+
     def ride_params
       params.require(:ride).permit(:max_seats, :max_range, :start_point, :end_point, :start_time, :driver_id)
     end

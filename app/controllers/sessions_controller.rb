@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     session[:id] = nil
     respond_to do |format|
       format.html { redirect_to rides_path }

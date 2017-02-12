@@ -1,0 +1,27 @@
+= form_for @user do |f|
+
+  = f.label :username
+  = f.text_field :username
+
+  = f.label :first_name
+  = f.text_field :first_name
+
+  = f.label :last_name
+  = f.text_field :last_name
+
+  = f.label :email
+  = f.text_field :email
+
+  = f.label :zip
+  = f.text_field :zip
+
+  = f.label :phone
+  = f.text_field :phone
+
+  = f.label :password
+  = f.text_field :password
+
+  = f.label :password_confirmation
+  = f.text_field :password_confirmation
+
+  = f.submit

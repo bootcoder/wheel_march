@@ -4,6 +4,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @users }
+    end
   end
 
   def show
@@ -20,11 +24,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User successfully created.' }
-        format.json { render json: @user }
+      if user_params[:password] == user_params[:password_confirmation]
+        if @user.save
+          format.html { redirect_to @user, notice: 'User successfully created.' }
+          format.json { render json: @user }
+        else
+          format.html { render :new }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Passwords must match.' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end

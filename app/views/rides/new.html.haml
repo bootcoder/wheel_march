@@ -1,3 +1,6 @@
+%script{:src => "https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js"}
+%link{:href => "https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css", :rel => "stylesheet"}/
+
 %h1 Start a Ride
 
 = form_for @ride do |f|
@@ -20,3 +23,21 @@
   = f.submit
   -# needs to be update to current_user.id once
   -# we've implemented user sessions.
+
+
+#map{:style => "width: 400px; height: 300px;"}
+:javascript
+  mapboxgl.accessToken = "#{ENV['MAPBOX_TOKEN']}"
+  var lat, lng;
+  var setCoords = function (position) {
+    lng = postition.coords.longitude
+    lat = position.coords.latitude
+  }
+  -# Im so fucking tired I can't even grasp the scope of two variable in two JS functions.
+  -# Mahallo mofo's much love
+  navigator.geolocation.getCurrentPosition(setCoords)
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: "#{ENV['MAPBOX_STYLE']}",
+      center: [lng,lat]
+  })

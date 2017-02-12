@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :rides
   resources :invitations
 
+  post 'passenger_rides/publish', :to => 'passenger_rides#publish'
   resource :session, :only => [:new, :create, :destroy]
-
 end

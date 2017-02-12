@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails default gems
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '>= 5.0.0.1'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -17,9 +17,9 @@ gem 'dotenv-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'faker'
+gem 'pubnub', '~> 4.0.15'
 gem 'haml-rails'
 gem 'bcrypt'
-
 
 # ENV specific gems
 group :development, :test do
